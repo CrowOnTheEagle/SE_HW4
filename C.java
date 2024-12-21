@@ -20,10 +20,19 @@ public class C {
         public String toString() {
             return String.format("x: %d, y: %d", x, y);
         }
+        public double GetDistance(Point p) {
+            int XDelta = p.GetX() - x;
+            XDelta *= XDelta;
+            int YDelta = p.GetY() - y;
+            YDelta *= YDelta;
+
+            return Math.sqrt(YDelta + XDelta);
+        }
     }
     public static void main(String[] args) {
         Point p1 = new Point(3, -5), p2 = new Point(10, 4);
         System.out.println(p1.toString());
         System.out.println(p2.toString());
+        System.out.println(p1.GetDistance(p2));
     }
 }
