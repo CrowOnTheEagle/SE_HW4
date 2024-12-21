@@ -9,6 +9,9 @@ public class B {
         static int Absolute(int a) {
             return a > 0 ? a : -a;
         }
+        static int Multiply(int a, int b) {
+            return a * b;
+        }
     }
     public static void main(String[] args) {
         int a = 3, b = -5;
